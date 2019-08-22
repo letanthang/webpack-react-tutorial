@@ -1,10 +1,12 @@
 import React from 'react'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reduxPromise from 'redux-promise'
+import { I18nextProvider } from 'react-i18next';
 import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
 import reducers from '../redux/reducers'
+import i18n from '../i18n/i18n'
 
 export default (props) => {
   let store = null
@@ -31,7 +33,9 @@ export default (props) => {
 
   return (
     <Provider store={store}>
-      {props.children}
+      <I18nextProvider i18n={i18n}>
+        {props.children}
+      </I18nextProvider>
     </Provider>
   )
 }

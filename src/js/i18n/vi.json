@@ -1,0 +1,47 @@
+{
+  "global": {
+    "created_at": "Ngày tạo",
+    "active": "Đang hoạt động",
+    "inactive": "Không hoạt động",
+    "add_new": "Thêm mới"
+  },
+  "aircraft": {
+    "table_name": "Danh sách máy bay",
+    "code": "Mã",
+    "name": "Tên",
+    "type": "Loại",
+    "cargo_max_width": "Max width",
+    "cargo_max_container": "Max container",
+    "package_type": "Loại"
+  },
+  "airline": {
+    "table_name":"Danh sách hãng hàng không",
+    "code": "Mã",
+    "name": "Tên",
+    "id": "ID",
+    "status": "Trạng thái",
+    "created_at": "Ngày tạo"
+  },
+  "airport": {
+    "table_name":"Danh sách sân bay",
+    "code": "Mã",
+    "id": "ID",
+    "name": "Tên",
+    "status": "Trạng thái",
+    "created_at": "Ngày tạo"
+  },
+  "company": {
+    "table_name":"Danh sách đối tác",
+    "code": "Mã",
+    "id": "ID",
+    "name": "Tên",
+    "status": "Trạng thái",
+    "type": "Loại",
+    "address": "Địa chỉ",
+    "created_at": "Ngày tạo"
+  },
+  "menu": {
+    "aircraft": "Loại máy bay",
+    "airline": "Hãng hàng không"
+  }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Input from "../common/Input";
 import Home from "../scene/Home";
+import Aircraft from "../scene/Aircraft";
 
 class App extends Component {
   constructor() {
@@ -16,19 +17,20 @@ class App extends Component {
   render() {
     const { seo_title } = this.state;
     return (
-      <div>
-        <form id="article-form">
-          <Input
-            text="SEO title hehe"
-            label="seo_title"
-            type="text"
-            id="seo_title"
-            value={seo_title}
-            handleChange={this.handleChange}
-          />
-        </form>
-        <Home />
-      </div>
+      <Aircraft />
+      // <div>
+      //   <form id="article-form">
+      //     <Input
+      //       text="SEO title hehe"
+      //       label="seo_title"
+      //       type="text"
+      //       id="seo_title"
+      //       value={seo_title}
+      //       handleChange={this.handleChange}
+      //     />
+      //   </form>
+      //   <Home />
+      // </div>
 
     );
   }
