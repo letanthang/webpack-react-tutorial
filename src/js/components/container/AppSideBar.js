@@ -12,13 +12,12 @@ class AppSideBar extends Component {
                         <li className="nav-item"><a className="nav-link active" href="#/aircraft" aria-current="page"><i className="nav-icon fa fa-plane"></i>Máy bay</a></li>
                         <li className="nav-item"><a className="nav-link" href="#/airline"><i className="nav-icon fa fa-plane"></i>Hãng hàng không</a></li><li className="nav-item"><a className="nav-link" href="#/airport"><i className="nav-icon fa fa-list"></i>Hãng hàng không</a></li><li className="nav-item"><a className="nav-link" href="#/company"><i className="nav-icon fa fa-list"></i>Đối tác bay</a></li>
                     </ul>
-                    <div className="ps__rail-x" style="left: 0px; bottom: 0px;">
-                        <div className="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">
+                    <div className="ps__rail-x" style={{ left: 0, bottom: 0 }}>
+                        <div className="ps__thumb-x" tabIndex="0" style={{ left: 0, width: 0 }}>
                         </div>
                     </div>
-                    <div className="ps__rail-y" style="top: 0px; right: 0px;">
-                        <div className="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
-
+                    <div className="ps__rail-y" style={{ top: 0, right: 0 }}>
+                        <div className="ps__thumb-y" tabIndex="0" style={{ top: 0, height: 0 }}>
                         </div>
                     </div>
                 </div>

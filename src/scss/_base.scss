@@ -21,48 +21,51 @@ body {
   height: 100px;
   // overflow: hidden;
   z-index: 1000;
-  background: #c8ced3
+  border: 1px orange solid!important;
+  margin: 1px;
+  background: #ffffff;
 }
 .app-body {
-  margin-top: 70px;
-}
-
-
-.wrapper {
+  margin-top: 100px;
   display: flex;
-  width: 100%;
+  flex-direction: row;
+  flex: 1;
   height: 100%;
-  transition: margin .5s;
-  margin: 0 0 0 -250px;
   border: 1px red solid;
 }
 
-.wrapper.is-nav-open{
- margin-left: 0;
-}
-
-.nav {
+.app-nav {
   position: relative;
   width: 250px;
+  margin-left: -250px;
   height: 100%;
-  padding: 20px;
   padding-right: 1px solid #ccc;
+  transition: margin .5s;
 }
-.nav__icon{
+.app-nav.is-nav-open{
+  margin-left: 0;
+}
+.app-main {
+  flex: 1;
+}
+.app-content {
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.app-nav__icon{
   color: red;
   background-color: red;
-  height: 50;
-  width: 50;
-  position: absolute;
-  top: 0;
-  right: -60px;
-  padding: 20px;
+  height: 32px;
+  width: 32px;
+  padding: 2px;
   font-size: 20px;
   cursor: pointer;
   transition: color .3s;
 }
-.nav__icon:hover {
-  color: #5eb2ff
+.app-nav__icon:hover {
+  color: #5eb2ff;
+  background-color: #5eb2ff;
 }
 
 .card-header:first-child {
