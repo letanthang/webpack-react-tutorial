@@ -29,7 +29,7 @@ class App extends Component {
           <div id="app-nav" className="app-nav">
             <AppSideBar />
           </div>
-          <div className="app-main">
+          <div className="app-main" id="app-main">
             <AppBreadCrumb />
             <div className="app-content">
               <Aircraft />
