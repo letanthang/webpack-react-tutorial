@@ -1,0 +1,134 @@
+// Sidebar
+// @import "../../node_modules/bootstrap/scss/variables"; // from bootstrap node_modules
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$sidebar-width:                       200px !default;
+$sidebar-padding:                     0 !default;
+$sidebar-minimized-width:             50px !default;
+$sidebar-minimized-height:            $sidebar-minimized-width !default;
+$sidebar-compact-width:               150px !default;
+$sidebar-compact-height:              $sidebar-compact-width !default;
+$sidebar-color:                       #fff !default;
+$sidebar-bg:                          $gray-800 !default;
+$sidebar-borders:                     none !default;
+$mobile-sidebar-width:                220px !default;
+$sidebar-nav-color:                   #fff !default;
+$sidebar-nav-title-padding-y:         .75rem !default;
+$sidebar-nav-title-padding-x:         1rem !default;
+$sidebar-nav-title-color:             $gray-200 !default;
+$sidebar-nav-link-padding-y:          .75rem !default;
+$sidebar-nav-link-padding-x:          1rem !default;
+$sidebar-nav-link-color:              #fff !default;
+$sidebar-nav-link-bg:                 transparent !default;
+$sidebar-nav-link-icon-color:         $gray-600 !default;
+$sidebar-nav-link-borders:            0 !default;
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: $sidebar-padding;
+    color: $sidebar-color;
+    background: $sidebar-bg;
+    .nav {
+        // @include sidebar-width($sidebar-borders, $sidebar-width);
+        flex-direction: column;
+        min-height: 100%;
+        padding: 0;
+      }
+    
+    .nav-title {
+    padding: $sidebar-nav-title-padding-y $sidebar-nav-title-padding-x;
+    font-size: 80%;
+    font-weight: 700;
+    color: $sidebar-nav-title-color;
+    text-transform: uppercase;
+    }
+}
+.sidebar .nav-item {
+    position: relative;
+    margin: 0;
+    -webkit-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+.sidebar .nav-link .nav-icon{
+    width: 14px;
+    height: 15px; 
+  }
+  
+  .sidebar .create-order-cls .nav-link .nav-icon{
+    background-position: 0px 0px;
+  }
+  .sidebar .create-order-cls:hover > .nav-link .nav-icon,
+  .sidebar .create-order-cls .nav-link.active .nav-icon{
+    background-position: -35px 0px; 
+  }	
+  
+  
+  .sidebar .import-order-cls .nav-link .nav-icon{
+    background-position: 0px -39px;
+  }
+  .sidebar .import-order-cls:hover > .nav-link .nav-icon,
+  .sidebar .import-order-cls .nav-link.active .nav-icon{
+    background-position: -35px -39px; 
+  }
+  
+  
+  .sidebar .list-order-cls .nav-link .nav-icon{
+    background-position: 0px -80px;
+  }
+  .sidebar .list-order-cls:hover > .nav-link .nav-icon,
+  .sidebar .list-order-cls .nav-link.active .nav-icon{
+    background-position: -35px -80px; 
+  }
+  
+  
+  .sidebar .full-trip-cls .nav-link .nav-icon{
+    background-position: 0px -120px;
+  }
+  .sidebar .full-trip-cls:hover > .nav-link .nav-icon,
+  .sidebar .full-trip-cls .nav-link.active .nav-icon{
+    background-position: -35px -120px; 
+  }
+  
+  .sidebar .list-full-trip-cls .nav-link .nav-icon{
+    background-position: 0px -162px;
+  }
+  .sidebar .list-full-trip-cls:hover > .nav-link .nav-icon,
+  .sidebar .list-full-trip-cls .nav-link.active .nav-icon{
+    background-position: -35px -162px; 
+  }
+  
+  .sidebar .address-cls .nav-link .nav-icon{
+    background-position: 0px -202px;
+  }
+  .sidebar .address-cls:hover > .nav-link .nav-icon,
+  .sidebar .address-cls .nav-link.active .nav-icon{
+    background-position: -35px -202px; 
+  }
+  
+  
+  .sidebar .change-password-cls .nav-link .nav-icon{
+    background-position: 0px -241px;
+  }
+  .sidebar .change-password-cls:hover > .nav-link .nav-icon,
+  .sidebar .change-password-cls .nav-link.active .nav-icon{
+    background-position: -35px -241px; 
+  }
+  
+  .sidebar .sign-out-cls .nav-link .nav-icon{
+    background-position: 0px -276px;
+  }
+  .sidebar .sign-out-cls:hover > .nav-link .nav-icon,
+  .sidebar .sign-out-cls .nav-link.active .nav-icon{
+    background-position: -35px -276px; 
+  }

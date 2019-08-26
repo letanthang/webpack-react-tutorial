@@ -21,7 +21,7 @@ body {
   height: $header-height;
   // overflow: hidden;
   z-index: 1000;
-  border: 1px orange solid!important;
+  border-bottom: 1px #F4F5F5 solid!important;
   margin: 1px;
   background: #ffffff;
   display: flex;
@@ -32,6 +32,19 @@ body {
 .header-col {
   display: flex;
   flex-direction: row;
+}
+
+.header-col span {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.header-col span:first-child {
+  margin-left: 0;
+}
+
+.header-col span:last-child {
+  margin-right: 0;
 }
 
 .app-body {
@@ -77,9 +90,19 @@ body {
   cursor: pointer;
   transition: color .3s;
 }
-.app-nav__icon:hover {
-  color: #5eb2ff;
-  background-color: #5eb2ff;
+
+
+.app-header .navbar-toggler-icon.is-nav-open{
+  background-position: -1px -306px !important;
+}
+
+
+.app-header .navbar-toggler-icon{
+  background-image: url("/images/frame.png") !important;
+  width: 22px;
+  height: 17px;
+  background-size: auto !important;
+  background-position: -1px -334px !important;
 }
 
 .card-header:first-child {

@@ -24,11 +24,15 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              limit: 8000, // Convert images < 8kb to base64 strings
+              limit: 3000, // Convert images < 8kb to base64 strings
               name: 'images/[name].[ext]'
             }
           }
         ]
+      },
+      {
+        test: /\.(ttf|eot|svg|woff|woff2)(\?[\s\S]+)?$/,
+        use: 'file-loader',
       },
       {
         test: /\.scss$/,

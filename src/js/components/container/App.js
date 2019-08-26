@@ -15,7 +15,6 @@ class App extends Component {
       seo_title: "helloooo"
     };
     this.handleChange = this.handleChange.bind(this);
-
   }
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });

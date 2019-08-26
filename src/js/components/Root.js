@@ -10,10 +10,10 @@ import i18n from '../i18n/i18n'
 
 export default (props) => {
   let store = null
+  const middlewares = [reduxPromise]
   if (process.env.NODE_ENV !== 'production') {
     hot(module)(props.children)
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-    const middlewares = [reduxPromise]
     store = createStore(
       reducers,
       props.initialState,
@@ -28,7 +28,7 @@ export default (props) => {
       });
     }
   } else {
-    store = createStore(reducers, applyMiddleware(...middleware));
+    store = createStore(reducers, applyMiddleware(...middlewares));
   }
 
   return (
