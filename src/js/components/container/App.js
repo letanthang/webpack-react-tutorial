@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import { Icon } from 'react-bootstrap'
-import Input from "../common/Input";
-import Home from "../scene/Home";
+import Login from "../scene/Pages/Login";
 import AppLayout from "./AppLayout";
 
 
@@ -31,6 +29,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/about/" exact component={this.About} />
+            <Route path="/login/" exact component={Login} />
             <Route path="/users/" exact component={this.Users} />
             <Route path="/" component={AppLayout} />
           </Switch>
