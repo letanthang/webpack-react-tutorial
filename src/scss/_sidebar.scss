@@ -34,13 +34,14 @@ $sidebar-nav-link-icon-color:         $gray-600 !default;
 $sidebar-nav-link-borders:            0 !default;
 
 .sidebar {
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: $sidebar-padding;
     color: $sidebar-color;
     background: $sidebar-bg;
     .nav {
-        // @include sidebar-width($sidebar-borders, $sidebar-width);
+        height: 100%;
         flex-direction: column;
         min-height: 100%;
         padding: 0;
@@ -53,82 +54,109 @@ $sidebar-nav-link-borders:            0 !default;
     color: $sidebar-nav-title-color;
     text-transform: uppercase;
     }
+    .nav-item {
+      position: relative;
+      margin: 0;
+      -webkit-transition: background .3s ease-in-out;
+      transition: background .3s ease-in-out;
+    }
+    .nav-link {
+      font-size: 14px;
+      color: #a6a7ab;
+      -webkit-transition: background-color 0.1s;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      background: transparent;
+      .nav-icon{
+        width: 14px;
+        height: 15px;
+        margin: 0 0.5rem 0 0;
+        font-size: 0.875rem;
+        color: #73818f;
+        text-align: center;
+      }
+    }
+    .nav-link.active {
+      color: #fff;
+      background: #3a4248;
+    }
+    .nav-link:hover {
+      color: #fff;
+    }
 }
-.sidebar .nav-item {
-    position: relative;
-    margin: 0;
-    -webkit-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
 }
-.sidebar .nav-link .nav-icon{
-    width: 14px;
-    height: 15px; 
-  }
+
   
-  .sidebar .create-order-cls .nav-link .nav-icon{
-    background-position: 0px 0px;
-  }
-  .sidebar .create-order-cls:hover > .nav-link .nav-icon,
-  .sidebar .create-order-cls .nav-link.active .nav-icon{
-    background-position: -35px 0px; 
-  }	
-  
-  
-  .sidebar .import-order-cls .nav-link .nav-icon{
-    background-position: 0px -39px;
-  }
-  .sidebar .import-order-cls:hover > .nav-link .nav-icon,
-  .sidebar .import-order-cls .nav-link.active .nav-icon{
-    background-position: -35px -39px; 
-  }
-  
-  
-  .sidebar .list-order-cls .nav-link .nav-icon{
-    background-position: 0px -80px;
-  }
-  .sidebar .list-order-cls:hover > .nav-link .nav-icon,
-  .sidebar .list-order-cls .nav-link.active .nav-icon{
-    background-position: -35px -80px; 
-  }
-  
-  
-  .sidebar .full-trip-cls .nav-link .nav-icon{
-    background-position: 0px -120px;
-  }
-  .sidebar .full-trip-cls:hover > .nav-link .nav-icon,
-  .sidebar .full-trip-cls .nav-link.active .nav-icon{
-    background-position: -35px -120px; 
-  }
-  
-  .sidebar .list-full-trip-cls .nav-link .nav-icon{
-    background-position: 0px -162px;
-  }
-  .sidebar .list-full-trip-cls:hover > .nav-link .nav-icon,
-  .sidebar .list-full-trip-cls .nav-link.active .nav-icon{
-    background-position: -35px -162px; 
-  }
-  
-  .sidebar .address-cls .nav-link .nav-icon{
-    background-position: 0px -202px;
-  }
-  .sidebar .address-cls:hover > .nav-link .nav-icon,
-  .sidebar .address-cls .nav-link.active .nav-icon{
-    background-position: -35px -202px; 
-  }
-  
-  
-  .sidebar .change-password-cls .nav-link .nav-icon{
-    background-position: 0px -241px;
-  }
-  .sidebar .change-password-cls:hover > .nav-link .nav-icon,
-  .sidebar .change-password-cls .nav-link.active .nav-icon{
-    background-position: -35px -241px; 
-  }
-  
-  .sidebar .sign-out-cls .nav-link .nav-icon{
-    background-position: 0px -276px;
-  }
-  .sidebar .sign-out-cls:hover > .nav-link .nav-icon,
-  .sidebar .sign-out-cls .nav-link.active .nav-icon{
-    background-position: -35px -276px; 
-  }
+.sidebar .create-order-cls .nav-link .nav-icon{
+  background-position: 0px 0px;
+}
+.sidebar .create-order-cls:hover > .nav-link .nav-icon,
+.sidebar .create-order-cls .nav-link.active .nav-icon{
+  background-position: -35px 0px; 
+}	
+
+
+.sidebar .import-order-cls .nav-link .nav-icon{
+  background-position: 0px -39px;
+}
+.sidebar .import-order-cls:hover > .nav-link .nav-icon,
+.sidebar .import-order-cls .nav-link.active .nav-icon{
+  background-position: -35px -39px; 
+}
+
+
+.sidebar .list-order-cls .nav-link .nav-icon{
+  background-position: 0px -80px;
+}
+.sidebar .list-order-cls:hover > .nav-link .nav-icon,
+.sidebar .list-order-cls .nav-link.active .nav-icon{
+  background-position: -35px -80px; 
+}
+
+
+.sidebar .full-trip-cls .nav-link .nav-icon{
+  background-position: 0px -120px;
+}
+.sidebar .full-trip-cls:hover > .nav-link .nav-icon,
+.sidebar .full-trip-cls .nav-link.active .nav-icon{
+  background-position: -35px -120px; 
+}
+
+.sidebar .list-full-trip-cls .nav-link .nav-icon{
+  background-position: 0px -162px;
+}
+.sidebar .list-full-trip-cls:hover > .nav-link .nav-icon,
+.sidebar .list-full-trip-cls .nav-link.active .nav-icon{
+  background-position: -35px -162px; 
+}
+
+.sidebar .address-cls .nav-link .nav-icon{
+  background-position: 0px -202px;
+}
+.sidebar .address-cls:hover > .nav-link .nav-icon,
+.sidebar .address-cls .nav-link.active .nav-icon{
+  background-position: -35px -202px; 
+}
+
+
+.sidebar .change-password-cls .nav-link .nav-icon{
+  background-position: 0px -241px;
+}
+.sidebar .change-password-cls:hover > .nav-link .nav-icon,
+.sidebar .change-password-cls .nav-link.active .nav-icon{
+  background-position: -35px -241px; 
+}
+
+.sidebar .sign-out-cls .nav-link .nav-icon{
+  background-position: 0px -276px;
+}
+.sidebar .sign-out-cls:hover > .nav-link .nav-icon,
+.sidebar .sign-out-cls .nav-link.active .nav-icon{
+  background-position: -35px -276px; 
+}

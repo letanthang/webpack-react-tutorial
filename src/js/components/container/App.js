@@ -1,11 +1,9 @@
 import React, { Component } from "react";
+import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import { Icon } from 'react-bootstrap'
 import Input from "../common/Input";
 import Home from "../scene/Home";
-import AppHeader from "./AppHeader";
-import AppBreadCrumb from "./AppBreadCrumb";
-import AppSideBar from "./AppSideBar";
-import Aircraft from "../scene/Aircraft";
+import AppLayout from "./AppLayout";
 
 
 class App extends Component {
@@ -20,28 +18,24 @@ class App extends Component {
     this.setState({ [event.target.id]: event.target.value });
   }
 
+  About() {
+    return <h2>About</h2>;
+  }
+
+  Users() {
+    return <h2>Users</h2>;
+  }
   render() {
     return (
       <div id="outer">
-        <AppHeader />
-        <div className="app-body">
-          <div id="app-nav" className="app-nav">
-            <AppSideBar />
-          </div>
-          <div className="app-main" id="app-main">
-            <AppBreadCrumb />
-            <div className="app-content">
-              <Aircraft />
-              <Aircraft />
-              <Aircraft />
-              <Aircraft />
-              <Aircraft />
-              <Aircraft />
-            </div>
-          </div>
-        </div>
+        <Router>
+          <Switch>
+            <Route path="/about/" exact component={this.About} />
+            <Route path="/users/" exact component={this.Users} />
+            <Route path="/" component={AppLayout} />
+          </Switch>
+        </Router>
       </div>
-
     );
   }
 }

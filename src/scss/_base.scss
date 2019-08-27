@@ -59,21 +59,23 @@ body {
   position: fixed;
   top: $header-height;
   left: 0;
-  width: 250px;
-  margin-left: -250px;
-  height: 100%;
+  bottom: 0;
+  width: 200px;
+  margin-left: -200px;
   padding-right: 1px solid #ccc;
-  transition: margin .5s;
+  transition: margin .3s;
 }
 .app-nav.is-nav-open{
   margin-left: 0;
 }
 .app-main {
   flex: 1;
-  transition: margin .5s;
+  margin-left: 0;
+  transition: margin .3s;
+  background-color: #F5F5F5;
 }
 .app-main.is-nav-open{
-  margin-left: 250px;
+  margin-left: 200px;
 }
 .app-content {
   padding-top: 8px;
