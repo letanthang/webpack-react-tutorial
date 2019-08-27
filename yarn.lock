@@ -5147,6 +5147,11 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redux-promise-middleware@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/redux-promise-middleware/-/redux-promise-middleware-6.1.1.tgz#0c26358712c2d5be3698faf7aaf53e7a7dc888dd"
+  integrity sha512-h/qDMWG+QzT/1LucCJt6S1A9T5+bCVUI3a0yGQb5XOanNzjvFe5sRdPbfQgYUShc0uWG8cLu8QxpkAj9xCBH8Q==
+
 redux-promise@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/redux-promise/-/redux-promise-0.6.0.tgz#c64723b5213bb5603c11b74302883b682e06b319"

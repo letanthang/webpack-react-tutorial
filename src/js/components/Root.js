@@ -1,11 +1,11 @@
 import React from 'react'
 import { createStore, applyMiddleware, compose } from 'redux'
-import reduxPromise from 'redux-promise'
+import reduxPromise from 'redux-promise-middleware'
 import { I18nextProvider } from 'react-i18next';
 import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
-import reducers from '../redux/reducers'
+import reducers from '../redux/duck'
 import i18n from '../i18n/i18n'
 
 export default (props) => {
