@@ -12,12 +12,13 @@ class AppLayout extends Component {
   }
   loading = () => <div className="animated fadeIn pt-1 text-center">Loading...</div>
   render() {
+    const { history } = this.props
     return (
       <div>
         <AppHeader />
         <div className="app-body">
           <div id="app-nav" className="app-nav">
-            <AppSideBar />
+            <AppSideBar history={history} />
           </div>
           <div className="app-main" id="app-main">
             <AppBreadCrumb />

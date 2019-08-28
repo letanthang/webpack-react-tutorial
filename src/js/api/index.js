@@ -4,7 +4,7 @@ export const GetComments = () => {
 }
 
 export const Authen = (username, password) => {
-  return axios.get('http://staging-truck-gw.ghn.vn/api/v1/public/user/login/admin', {
+  return axios.post('http://staging-truck-gw.ghn.vn/api/v1/public/user/login/admin', {
     phone: username,
     password
   })

@@ -46,7 +46,9 @@ body {
 .header-col span:last-child {
   margin-right: 0;
 }
-
+.app {
+  display: flex;
+}
 .app-body {
   margin-top: $header-height;
   display: flex;

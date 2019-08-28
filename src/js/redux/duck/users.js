@@ -4,12 +4,19 @@ import { Authen } from '../../api'
 const LOGIN = 'crm/users/LOGIN'
 const LOGIN_FULFILLED = 'crm/users/LOGIN_FULFILLED'
 const LOGIN_REJECTED = 'crm/users/LOGIN_REJECTED'
+const LOGOUT = 'crm/users/LOGOUT'
 
 export const loginUser = (username, password) => {
   const response = Authen(username, password)
   return {
     type: LOGIN,
     payload: response
+  }
+}
+
+export const logoutUser = () => {
+  return {
+    type: LOGOUT,
   }
 }
 
@@ -22,6 +29,10 @@ export default (state = { user: null }, action) => {
     }
     case LOGIN_REJECTED: {
       return state
+    }
+
+    case LOGOUT: {
+      return { ...state, user: null }
     }
 
     default:

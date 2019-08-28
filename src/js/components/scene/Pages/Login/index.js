@@ -17,15 +17,13 @@ class Login extends Component {
     }
   }
   componentDidMount() {
-    console.log(process.env)
+    console.log("env var", process.env.NODE_PATH, process.env.PORT)
   }
-  componentWillMount = () => {
-    // Reducers.logout()
-  }
-  componentWillUpdate() {
-    if (this.props.user) {
-      this.props.history.push("/home")
+  static getDerivedStateFromProps(props, state) {
+    if (props.user) {
+      props.history.push("/home")
     }
+    return null
   }
 
   setPopupError = () => {
@@ -50,11 +48,11 @@ class Login extends Component {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <div>
+              <div className="card-group">
                 <Card className="p-4">
                   <div>
                     <Form>
-                      <h1>Login</h1>
+                      <h1>Login123</h1>
                       <p className="text-muted">Sign In to your account</p>
                       <div className="input-group mb-3">
                         <span className="input-group-addon">

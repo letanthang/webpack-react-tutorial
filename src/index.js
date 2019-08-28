@@ -1,8 +1,10 @@
+import 'react-hot-loader'
+import Root from "./js/components/Root";
 import React from 'react'
 import ReactDOM from "react-dom";
 import './App.scss'
 import App from "./js/components/container/App";
-import Root from "./js/components/Root";
+
 
 //load resource for css access at /images/...
 if (process.env.NODE_ENV !== 'production') {

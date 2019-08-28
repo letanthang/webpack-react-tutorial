@@ -1,6 +1,18 @@
+const webpack = require('webpack');
+const dotenv = require('dotenv');
+// call dotenv and it will return an Object with a parsed key 
+const env = dotenv.config().parsed;
+
+// reduce it to a nice object, the same as before
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: ['react-hot-loader/patch', './src'],
   module: {
     rules: [
       {
@@ -44,6 +56,11 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
-  ]
+    }),
+    new webpack.DefinePlugin(envKeys),
+  ],
+  devServer: {
+    port: env.PORT,
+    hot: true,
+  }
 }

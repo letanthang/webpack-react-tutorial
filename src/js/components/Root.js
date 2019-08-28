@@ -1,18 +1,18 @@
+import { hot } from 'react-hot-loader/root'
 import React from 'react'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reduxPromise from 'redux-promise-middleware'
 import { I18nextProvider } from 'react-i18next';
-import { hot } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
 import reducers from '../redux/duck'
 import i18n from '../i18n/i18n'
 
-export default (props) => {
+const Root = (props) => {
   let store = null
   const middlewares = [reduxPromise]
   if (process.env.NODE_ENV !== 'production') {
-    hot(module)(props.children)
+    // hot(module)(props.children)
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
     store = createStore(
       reducers,
@@ -21,12 +21,13 @@ export default (props) => {
         applyMiddleware(...middlewares)
       )
     )
-    if (module.hot) {
-      // Enable Webpack hot module replacement for reducers
-      module.hot.accept('../redux/reducers', () => {
-        store.replaceReducer(reducers);
-      });
-    }
+    // if (module.hot) {
+    //   // Enable Webpack hot module replacement for reducers
+    //   module.hot.accept('../redux/duck', () => {
+    //     const nextRootReducer = require('../redux/duck/index');
+    //     store.replaceReducer(nextRootReducer);
+    //   });
+    // }
   } else {
     store = createStore(reducers, applyMiddleware(...middlewares));
   }
@@ -39,3 +40,5 @@ export default (props) => {
     </Provider>
   )
 }
+
+export default hot(Root)
