@@ -58,9 +58,11 @@ module.exports = {
       filename: "./index.html"
     }),
     new webpack.DefinePlugin(envKeys),
+    new webpack.NamedModulesPlugin(),
   ],
   devServer: {
     port: env.PORT,
-    hot: true,
+    hotOnly: true,
+    https: true,
   }
 }

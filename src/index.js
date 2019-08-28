@@ -1,4 +1,5 @@
-import 'react-hot-loader'
+import { setConfig } from 'react-hot-loader';
+setConfig({ logLevel: 'debug' });
 import Root from "./js/components/Root";
 import React from 'react'
 import ReactDOM from "react-dom";

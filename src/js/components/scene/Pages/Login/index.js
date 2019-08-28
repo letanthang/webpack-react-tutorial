@@ -17,7 +17,7 @@ class Login extends Component {
     }
   }
   componentDidMount() {
-    console.log("env var", process.env.NODE_PATH, process.env.PORT)
+    console.log("env var", process.env.NODE_PATH, process.env.PORT, process.env.NODE_ENV)
   }
   static getDerivedStateFromProps(props, state) {
     if (props.user) {

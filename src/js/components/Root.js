@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root'
 import React from 'react'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reduxPromise from 'redux-promise-middleware'
@@ -41,4 +40,4 @@ const Root = (props) => {
   )
 }
 
-export default hot(Root)
+export default Root

@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader/root'
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Login from "../scene/Pages/Login";
@@ -38,4 +39,4 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default hot(App);
