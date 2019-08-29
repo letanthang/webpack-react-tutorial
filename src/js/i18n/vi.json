@@ -14,34 +14,17 @@
     "cargo_max_container": "Max container",
     "package_type": "Loại"
   },
-  "airline": {
-    "table_name":"Danh sách hãng hàng không",
-    "code": "Mã",
-    "name": "Tên",
-    "id": "ID",
-    "status": "Trạng thái",
-    "created_at": "Ngày tạo"
-  },
-  "airport": {
-    "table_name":"Danh sách sân bay",
-    "code": "Mã",
-    "id": "ID",
-    "name": "Tên",
-    "status": "Trạng thái",
-    "created_at": "Ngày tạo"
-  },
-  "company": {
-    "table_name":"Danh sách đối tác",
-    "code": "Mã",
-    "id": "ID",
-    "name": "Tên",
-    "status": "Trạng thái",
-    "type": "Loại",
-    "address": "Địa chỉ",
-    "created_at": "Ngày tạo"
-  },
-  "menu": {
-    "aircraft": "Loại máy bay",
-    "airline": "Hãng hàng không"
+  "priceset": {
+    "table_name": "Danh sách bảng giá",
+    "agent": "Đối tác bay",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "city": "Thành phố",
+    "status": "Tình trạng",
+    "action": "Thao tác",
+    "edit": "Chỉnh sửa",
+    "save": "Lưu",
+    "delete": "Xoá",
+    "cancel": "Huỷ"
   }
 }

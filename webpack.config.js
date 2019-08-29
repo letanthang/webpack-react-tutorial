@@ -62,7 +62,8 @@ module.exports = {
   ],
   devServer: {
     port: env.PORT,
-    hotOnly: true,
+    hotOnly: false,
+    hot: true,
     https: false,
   }
 }

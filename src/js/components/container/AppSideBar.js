@@ -21,6 +21,8 @@ class AppSideBar extends Component {
                     <li className="nav-item"><a className="nav-link" href="#/login" aria-current="page"><i className="nav-icon fa fa-sign-in"></i>Login</a></li>
                     <li className="nav-item" onClick={this.logoutUser}><span className="nav-link" aria-current="page"><i className="nav-icon fa fa-sign-out"></i>Logout</span></li>
                     <li className="nav-item"><a className="nav-link active" href="#/aircraft" aria-current="page"><i className="nav-icon fa fa-plane"></i>Máy bay</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#/priceset" aria-current="page"><i className="nav-icon fa fa-tags"></i>Bảng giá</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#/pricesetedit" aria-current="page"><i className="nav-icon fa fa-tag"></i>Edit Bảng giá</a></li>
                     <li className="nav-item"><a className="nav-link" href="#/airline"><i className="nav-icon fa fa-plane"></i>Hãng hàng không</a></li><li className="nav-item"><a className="nav-link" href="#/airport"><i className="nav-icon fa fa-list"></i>Hãng hàng không</a></li><li className="nav-item"><a className="nav-link" href="#/company"><i className="nav-icon fa fa-list"></i>Đối tác bay</a></li>
 
                 </ul>

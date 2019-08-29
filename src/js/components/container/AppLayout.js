@@ -4,6 +4,8 @@ import AppHeader from "./AppHeader";
 import AppBreadCrumb from "./AppBreadCrumb";
 import AppSideBar from "./AppSideBar";
 import Aircraft from "../scene/Aircraft";
+import PriceSet from "js/components/scene/PriceSet";
+import PriceSetEdit from "js/components/scene/PriceSetEdit";
 import Home from "../scene/Home";
 
 class AppLayout extends Component {
@@ -25,19 +27,10 @@ class AppLayout extends Component {
             <div className="app-content">
               <Suspense fallback={this.loading}>
                 <Switch>
-                  <Route
-                    key="aircraft"
-                    path="/aircraft"
-                    exact
-                    name="aircraft"
-                    component={Aircraft}
-                  />
-                  <Route
-                    key="home"
-                    path="/home"
-                    name="home"
-                    component={Home}
-                  />
+                  <Route key="aircraft" path="/aircraft" name="aircraft" component={Aircraft} />
+                  <Route key="home" path="/home" name="home" component={Home} />
+                  <Route key="priceset" path="/priceset" name="aircraft" component={PriceSet} />
+                  <Route key="pricesetedit" path="/pricesetedit" name="aircraft" component={PriceSetEdit} />
                 </Switch>
               </Suspense>
             </div>
