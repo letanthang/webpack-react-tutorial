@@ -12,6 +12,18 @@
   ],
   "plugins": [
     "react-hot-loader/babel",
-    "@babel/plugin-proposal-class-properties"
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "test": "./test",
+          "comp": "./src/components"
+        }
+      }
+    ]
   ]
 }

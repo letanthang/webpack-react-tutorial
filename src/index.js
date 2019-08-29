@@ -1,10 +1,10 @@
 import { setConfig } from 'react-hot-loader';
 setConfig({ logLevel: 'debug' });
-import Root from "./js/components/Root";
+import Root from "js/components/Root";
 import React from 'react'
 import ReactDOM from "react-dom";
 import './App.scss'
-import App from "./js/components/container/App";
+import App from "js/components/container/App";
 
 
 //load resource for css access at /images/...

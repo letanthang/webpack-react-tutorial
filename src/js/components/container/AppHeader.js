@@ -25,7 +25,7 @@ class AppHeader extends Component {
           />
         </div>
         <div className="header-col">
-          <span><img height="32" src={require('../../../assets/img/log-logo.png')} /></span>
+          <span><img height="32" src={require('assets/img/log-logo.png')} /></span>
           <span
             className="app-nav__icon"
             type="menu_fold"

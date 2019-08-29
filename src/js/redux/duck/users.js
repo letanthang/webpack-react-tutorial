@@ -1,5 +1,5 @@
 
-import { Authen } from '../../api'
+import { Authen } from 'js/api'
 
 const LOGIN = 'crm/users/LOGIN'
 const LOGIN_FULFILLED = 'crm/users/LOGIN_FULFILLED'

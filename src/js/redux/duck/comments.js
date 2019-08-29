@@ -1,5 +1,5 @@
 
-import { GetComments } from '../../api'
+import { GetComments } from 'js/api'
 const SAVE = 'crm/comments/SAVE'
 const FETCH = 'crm/comments/FETCH'
 const FETCH_FULFILLED = 'crm/comments/FETCH_FULFILLED'

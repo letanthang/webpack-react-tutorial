@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
-import { loginUser } from '../../../../redux/duck/users'
-import logo from '../../../../../assets/img/log-logo.png'
+import { loginUser } from 'js/redux/duck/users'
+import logo from 'assets/img/log-logo.png'
 // import ErrorMessage from '../../../components/ErrorMessage'
 const loginReq = {
   phone: "",
@@ -27,8 +27,8 @@ class Login extends Component {
   }
 
   setPopupError = () => {
-    const { dispatch } = this.props
-    dispatch(clearErrorMessage())
+    // const { dispatch } = this.props
+    // dispatch(clearErrorMessage())
   }
 
   login = () => {

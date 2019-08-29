@@ -36,6 +36,7 @@
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
     "css-loader": "^3.2.0",
     "dotenv": "^8.1.0",
     "file-loader": "^4.2.0",

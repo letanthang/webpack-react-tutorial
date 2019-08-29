@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { logoutUser } from '../../redux/duck/users'
+import { logoutUser } from 'js/redux/duck/users'
 
 class AppSideBar extends Component {
     logoutUser = () => {
